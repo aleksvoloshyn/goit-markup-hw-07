@@ -1,0 +1,35 @@
+/* advantages */
+.advantages {
+    padding-bottom: 0;
+}
+
+.advantages .title {
+    display: none;
+}
+
+.advantages-list {
+    display: flex;
+}
+
+.advantages .item {
+    width: 270px;
+}
+
+.advantages-title {
+    margin-bottom: 10px;
+}
+
+.advantages .item+.item {
+    margin-left: 30px;
+}
+
+.advantages-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background-color: var(--third-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
