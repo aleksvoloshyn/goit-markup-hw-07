@@ -1,26 +1,23 @@
 /* advantages */
 .advantages {
     padding-bottom: 0;
-}
-
-.advantages .title {
-    display: none;
+    .title {
+        display: none;
+    }
+    .item {
+        width: 270px;
+    }
+    .item+.item {
+        margin-left: 30px;
+    }
 }
 
 .advantages-list {
     display: flex;
 }
 
-.advantages .item {
-    width: 270px;
-}
-
 .advantages-title {
     margin-bottom: 10px;
-}
-
-.advantages .item+.item {
-    margin-left: 30px;
 }
 
 .advantages-logos {
