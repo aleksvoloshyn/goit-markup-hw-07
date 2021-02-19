@@ -477,20 +477,20 @@ form.inputs {
   display: none;
 }
 
-.advantages-list {
-  display: flex;
-}
-
 .advantages .item {
   width: 270px;
 }
 
-.advantages-title {
-  margin-bottom: 10px;
-}
-
 .advantages .item + .item {
   margin-left: 30px;
+}
+
+.advantages-list {
+  display: flex;
+}
+
+.advantages-title {
+  margin-bottom: 10px;
 }
 
 .advantages-logos {
@@ -587,7 +587,6 @@ form.inputs {
   margin-bottom: 16px;
 }
 
-/* clients */
 ul.client-list {
   display: flex;
 }
@@ -616,8 +615,7 @@ a.client-link {
   border-radius: 4px;
 }
 
-a.client-link:hover,
-a.client-link:focus {
+a.client-link:hover, a.client-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
