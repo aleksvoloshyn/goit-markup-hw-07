@@ -123,18 +123,6 @@ h3 {
   /* outline: 1px solid salmon; */
 }
 
-.container {
-  margin: 0 auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* header */
-.bordered-header {
-  border-bottom: 1px solid var(--header-border-color);
-}
-
 .page-header .list a:hover,
 .page-header .list a:focus,
 .footer address a:hover,
@@ -153,6 +141,18 @@ a.social-link,
   transition: color var(--transition-cubic-primary), background-color var(--transition-cubic-primary), box-shadow var(--transition-cubic-primary);
 }
 
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* header */
+.bordered-header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 /* site-nav */
 .nav-wrapper {
   display: flex;
@@ -163,6 +163,13 @@ a.social-link,
   align-items: center;
 }
 
+.site-nav .link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .site-nav-pages {
   display: flex;
 }
@@ -171,19 +178,11 @@ a.social-link,
   margin-right: 50px;
 }
 
-.site-nav .link {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .link.current {
   position: relative;
 }
 
-/* подчеркивание под текущей ссылкой */
-a.link.current::after {
+.link.current:after {
   position: absolute;
   bottom: 0;
   left: 0;

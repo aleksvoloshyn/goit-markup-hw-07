@@ -1,27 +1,6 @@
-
 /* header */
 .bordered-header {
     border-bottom: 1px solid var(--header-border-color);
-}
-
-.page-header .list a:hover,
-.page-header .list a:focus,
-.footer address a:hover,
-.footer address a:focus {
-    color: var(--accent-color);
-}
-
-/* animations */
-.page-header .list a,
-.footer address a,
-a.client-link,
-a.social-link,
-.our-team a.social-link,
-.portfolio button,
-.portfolio-items a {
-    transition: color var(--transition-cubic-primary),
-        background-color var(--transition-cubic-primary),
-        box-shadow var(--transition-cubic-primary);
 }
 
 /* site-nav */
@@ -32,40 +11,43 @@ a.social-link,
 .site-nav {
     display: flex;
     align-items: center;
+
+    .link {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 .site-nav-pages {
     display: flex;
 }
 
-.site-nav-pages .item:not(:last-child) {
-    margin-right: 50px;
+.site-nav-pages {
+    .item:not(:last-child) {
+        margin-right: 50px;
+    }
 }
 
-.site-nav .link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+
 
 .link.current {
     position: relative;
-}
 
-/* подчеркивание под текущей ссылкой */
-a.link.current::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
 
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
 
-    background-color: var(--accent-color);
-    border-radius: 2px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+    }
 }
 
 /* site logo */
@@ -86,8 +68,10 @@ a.link.current::after {
 }
 
 /* всем у кого сверху по-соседству класс item */
-.contacts .item+.item {
-    margin-left: 50px;
+.contacts {
+    .item+.item {
+        margin-left: 50px;
+    }
 }
 
 /* site navigation */

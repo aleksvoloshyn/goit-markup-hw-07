@@ -53,3 +53,23 @@ h3 {
     padding-top: 94px;
     /* outline: 1px solid salmon; */
 }
+
+.page-header .list a:hover,
+.page-header .list a:focus,
+.footer address a:hover,
+.footer address a:focus {
+    color: var(--accent-color);
+}
+
+/* animations */
+.page-header .list a,
+.footer address a,
+a.client-link,
+a.social-link,
+.our-team a.social-link,
+.portfolio button,
+.portfolio-items a {
+    transition: color var(--transition-cubic-primary),
+        background-color var(--transition-cubic-primary),
+        box-shadow var(--transition-cubic-primary);
+}
