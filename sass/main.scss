@@ -1,22 +1,23 @@
 // UTILS
-@import "./utils/variables";
-@import "./utils/visually-hidden";
+@import './utils/variables';
+@import './utils/visually-hidden';
 
 // BASE
-@import "./base/common";
-@import "./base/common-styles";
-@import "./base/container";
+@import './base/common';
+@import './base/common-styles';
+@import './base/container';
 
 // COMPONENTS
 
-
 // lAYOUT
-@import "./layout/_header";
-@import "./layout/hero";
-@import "./layout/modal";
-@import "./layout/advantages";
-@import "./layout/what-we-do";
-@import "./layout/our-team";
-@import "./layout/clients";
-@import "./layout/footer";
-@import "./layout/portfolio";
+@import './layout/_header';
+@import './layout/hero';
+@import './layout/modal';
+@import './layout/advantages';
+@import './layout/what-we-do';
+@import './layout/our-team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/portfolio';
+
+@import './utils/_test';

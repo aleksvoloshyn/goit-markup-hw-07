@@ -874,4 +874,24 @@ a.social-link:focus {
   opacity: 1;
   transform: translatey(0);
 }
+
+.social-listt {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.social-listt {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 22px;
+  border-color: tomato;
+  border-radius: 4px;
+}
+
+.social-listtt {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.286;
+}
 /*# sourceMappingURL=main.css.map */
