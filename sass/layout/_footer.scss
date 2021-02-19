@@ -1,17 +1,20 @@
 /* footer */
 .footer {
     background-color: var(--second-bg-color);
+    color: var(--whitecolor);
+
     padding-top: 60px;
     padding-bottom: 60px;
+
+    a {
+        color: var(--whitecolor);
+    }
 }
 
-.footer,
-.footer a {
-    color: var(--whitecolor);
-}
-
-.footer-address-list a {
-    color: var(--address-color);
+.footer-address-list {
+    a {
+        color: var(--address-color);
+    }
 }
 
 .footer .site-nav-logo,
@@ -50,13 +53,13 @@ ul.social-list {
     display: flex;
 }
 
-li.social-item:not(:last-child) {
-    margin-right: 10px;
-}
-
 li.social-item {
     width: 44px;
     height: 44px;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 a.social-link {
@@ -68,21 +71,24 @@ a.social-link {
     height: 100%;
     background-color: var(--icons-bg);
     fill: currentColor;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
 }
 
-a.social-link:hover,
-a.social-link:focus {
-    background-color: var(--accent-color);
+.our-team {
+    a.social-link {
+        color: var(--logo-color);
+
+        &:hover,
+        &:focus {
+            color: var(--whitecolor);
+        }
+    }
 }
 
-.our-team a.social-link {
-    color: var(--logo-color);
-}
-
-.our-team a.social-link:hover,
-.our-team a.social-link:focus {
-    color: var(--whitecolor);
-}
 
 .subscribe-form {
     /* outline: 1px solid green; */
@@ -120,8 +126,10 @@ a.social-link:focus {
     padding-right: 28px;
 }
 
-.subscribe-form .icon {
-    fill: currentColor;
-    position: absolute;
-    right: 28px;
+.subscribe-form {
+    .icon {
+        fill: currentColor;
+        position: absolute;
+        right: 28px;
+    }
 }

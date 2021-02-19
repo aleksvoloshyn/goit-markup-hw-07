@@ -623,11 +623,11 @@ a.client-link:hover, a.client-link:focus {
 /* footer */
 .footer {
   background-color: var(--second-bg-color);
+  color: var(--whitecolor);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.footer,
 .footer a {
   color: var(--whitecolor);
 }
@@ -672,13 +672,13 @@ ul.social-list {
   display: flex;
 }
 
-li.social-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 li.social-item {
   width: 44px;
   height: 44px;
+}
+
+li.social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 a.social-link {
@@ -692,8 +692,7 @@ a.social-link {
   fill: currentColor;
 }
 
-a.social-link:hover,
-a.social-link:focus {
+a.social-link:hover, a.social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -701,8 +700,7 @@ a.social-link:focus {
   color: var(--logo-color);
 }
 
-.our-team a.social-link:hover,
-.our-team a.social-link:focus {
+.our-team a.social-link:hover, .our-team a.social-link:focus {
   color: var(--whitecolor);
 }
 
