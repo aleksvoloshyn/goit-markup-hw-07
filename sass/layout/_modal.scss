@@ -13,11 +13,12 @@
     transition: opacity 250ms linear;
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-
-    /* при этом классе нф элемент не действуют события (у элемента с этим свойством - события не работают) */
-    pointer-events: none;
+.backdrop {
+    &.is-hidden {
+        opacity: 0;
+        /* при этом классе нф элемент не действуют события (у элемента с этим свойством - события не работают) */
+        pointer-events: none;
+    }
 }
 
 .modal {
@@ -52,10 +53,10 @@
     border-radius: 50%;
 
     background-color: inherit;
-}
 
-.modal-button:hover {
-    fill: var(--accent-color);
+    &:hover {
+        fill: var(--accent-color);
+    }
 }
 
 /* заголовок формы*/
@@ -102,13 +103,21 @@ form.inputs {
     padding-left: 12px;
 }
 
-.form-input:focus+.input-icon {
-    fill: var(--accent-color);
+.form-input {
+    &:focus+.input-icon {
+        fill: var(--accent-color);
+    }
+
+    &.form-input:focus {
+        outline-color: var(--accent-color);
+    }
 }
 
-.form-input:focus,
-.form-text:focus {
-    outline-color: var(--accent-color);
+
+.form-text {
+    &:focus {
+        outline-color: var(--accent-color);
+    }
 }
 
 .form-field-textarea {
@@ -134,11 +143,13 @@ form.inputs {
     margin-bottom: 0;
 }
 
-.form-text::placeholder {
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: var(--placeholder-text-color);
+.form-text {
+    &::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: var(--placeholder-text-color);
+    }
 }
 
 .wrapp-form {
@@ -168,27 +179,29 @@ form.inputs {
     border: 0;
     padding: 0;
     overflow: hidden;
+
+    &:checked+.agreement::before {
+        background-image: url(./../images/modal/icon-checked.svg);
+    }
+
+    &:focus+.agreement::before {
+        box-shadow: var(--modal-box-shadow-checkbox);
+    }
+
+    &:focus:checked+.agreement::before {
+        box-shadow: var(--modal-box-shadow-checkbox);
+    }
 }
 
-.agreement::before {
-    content: "";
-    width: 16px;
-    height: 15px;
-    background-image: url(./../images/modal/icon-check.svg);
-    margin-right: 7px;
-    background-size: contain;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-}
-
-.checkbox:checked+.agreement::before {
-    background-image: url(./../images/modal/icon-checked.svg);
-}
-
-.checkbox:focus+.agreement::before {
-    box-shadow: var(--modal-box-shadow-checkbox);
-}
-
-.checkbox:focus:checked+.agreement::before {
-    box-shadow: var(--modal-box-shadow-checkbox);
+.agreement {
+    &::before {
+        content: "";
+        width: 16px;
+        height: 15px;
+        background-image: url(./../images/modal/icon-check.svg);
+        margin-right: 7px;
+        background-size: contain;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+    }
 }
