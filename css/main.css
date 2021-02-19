@@ -554,8 +554,18 @@ form.inputs {
   background-color: var(--third-bg-color);
 }
 
+.our-team .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .our-team-list {
   display: flex;
+}
+
+.our-team-list .title {
+  font-size: 16px;
+  text-transform: unset;
+  margin-bottom: 10px;
 }
 
 .our-team-list .item {
@@ -569,16 +579,6 @@ form.inputs {
   padding-bottom: 30px;
   padding-left: 32px;
   padding-right: 32px;
-}
-
-.our-team .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.our-team-list .title {
-  font-size: 16px;
-  text-transform: unset;
-  margin-bottom: 10px;
 }
 
 .our-team-description {
