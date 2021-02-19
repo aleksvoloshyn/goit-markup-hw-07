@@ -746,8 +746,7 @@ a.social-link:hover, a.social-link:focus {
 }
 
 /* portfolio styles */
-.portfolio button:hover,
-.portfolio button:focus {
+.portfolio button:hover, .portfolio button:focus {
   background-color: var(--accent-color);
   color: var(--whitecolor);
   box-shadow: var(--button-shadow);
@@ -790,6 +789,13 @@ a.social-link:hover, a.social-link:focus {
   box-shadow: var(--button-shadow);
 }
 
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  /* 2nd layer hover*/
+}
+
 .portfolio-items .title {
   font-weight: bold;
   font-size: 18px;
@@ -798,50 +804,39 @@ a.social-link:hover, a.social-link:focus {
   text-align: left;
 }
 
-.portfolio-items {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-
-/* задаем для детей суммируемый марджин и у родителя минусовой */
 .portfolio-items .item {
   width: 370px;
   margin: 15px;
   border: 1px solid var(--border-color-portfolio);
 }
 
-.portfolio-items a:hover,
-.portfolio-items a:focus {
-  box-shadow: var(--portfolio-card-shadow);
-}
-
-/* у каждого 3го правый марджин 0 */
 .portfolio-items .item:nth-child(3n) {
   margin-right: 0;
 }
 
-/* у последних 3х элементов */
 .portfolio-items .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.portfolio-text-block {
+.portfolio-items .item a:hover .portfolio-items .item a:focus {
+  box-shadow: var(--portfolio-card-shadow);
+}
+
+.portfolio-items .portfolio-text-block {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
 }
 
-.portfolio-description {
+.portfolio-items .portfolio-description {
   margin-top: 4px;
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.88;
 }
 
-/* 2nd layer hover*/
-.potfolio-items-thumb {
+.portfolio-items .potfolio-items-thumb {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -849,7 +844,7 @@ a.social-link:hover, a.social-link:focus {
   align-items: center;
 }
 
-.overlay {
+.portfolio-items .overlay {
   /* border: 1px dotted saddlebrown; */
   position: absolute;
   top: 0;
@@ -867,8 +862,8 @@ a.social-link:hover, a.social-link:focus {
   transition: transform var(--transition-cubic-primary);
 }
 
-.portfolio-items-link:hover .overlay,
-.portfolio-items-link:focus .overlay {
+.portfolio-items .portfolio-items-link:hover .overlay,
+.portfolio-items .portfolio-items-link:focus .overlay {
   opacity: 1;
   transform: translatey(0);
 }
