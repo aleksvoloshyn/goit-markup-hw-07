@@ -1,6 +1,7 @@
 // UTILS
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/mixins';
 
 // BASE
 @import './base/common';
@@ -19,5 +20,3 @@
 @import './layout/clients';
 @import './layout/footer';
 @import './layout/portfolio';
-
-@import './utils/_test';
